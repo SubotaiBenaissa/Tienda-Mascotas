@@ -9,12 +9,11 @@
             alt=""
             loading="lazy"
           />
+          <p>Tienda de mascotas :D</p>
         </a>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a
-              class="nav-link"
-              @click="$router.push({ name: 'Index' })"
+            <a class="nav-link" @click="$router.push({ name: 'Index' })"
               >Inicio</a
             >
           </li>
@@ -23,6 +22,13 @@
               class="nav-link"
               @click="$router.push({ name: 'AgregarProducto' })"
               >Añadir producto</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              @click="$router.push({ name: 'CrearCategoria' })"
+              >Añadir categoria</a
             >
           </li>
         </ul>

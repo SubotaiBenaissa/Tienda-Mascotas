@@ -4,28 +4,28 @@
     <div class="album py-5 bg-darkblue">
       <div class="container">
         <div class="row">
-            <div v-for="prods in APIData" :key="prods.id" class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img
-                  class="card-img-top"
-                  src="https://via.placeholder.com/150x100"
-                  alt="Card image cap"
-                />
-                <div class="card-body">
-                  <h4>
-                    <a class="text-secondary"> {{ prods.nombre }}</a>
-                  </h4>
-                  <p class="card-text">{{ prods.descripcion }}</p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <small class="text-muted">:D</small>
-                  </div>
+          <div v-for="prods in APIData" :key="prods.id" class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img
+                class="card-img-top"
+                src="https://previews.123rf.com/images/alfadanz/alfadanz1803/alfadanz180300075/97044689-conjunto-de-iconos-de-tienda-de-mascotas-con-accesorios-para-gatos-boho-ilustración-vectorial.jpg"
+                width="100"
+                height="200"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h4>
+                  <a class="text-secondary"> {{ prods.nombre }}</a>
+                </h4>
+                <p class="card-text">{{ prods.descripcion }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">:D</small>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </div>
   </div>
 </template>
@@ -52,7 +52,7 @@ export default {
 
   created() {
     getApi
-      .get("index/filtrar/"+this.idProducto)
+      .get("index/filtrar/" + this.idProducto)
       .then((Response) => {
         console.log("Api prods recibe datos");
         this.APIData = Response.data;
@@ -60,6 +60,10 @@ export default {
       .catch((err) => {
         console.log(err);
       });
+  },
+
+  methods: {
+    borrarProducto() {},
   },
 };
 </script>

@@ -8,12 +8,14 @@
             <div class="card mb-4 box-shadow">
               <img
                 class="card-img-top"
-                src="https://via.placeholder.com/150x100"
+                src="https://previews.123rf.com/images/alfadanz/alfadanz1803/alfadanz180300075/97044689-conjunto-de-iconos-de-tienda-de-mascotas-con-accesorios-para-gatos-boho-ilustración-vectorial.jpg"
+                width="100"
+                height="200"
                 alt="Card image cap"
               />
               <div class="card-body">
                 <h4>
-                  <a class="text-secondary" @click="$router.push({name: 'Productos', params: {id: categs.id}})"> {{categs.nombre}}</a>
+                  <a class="text-secondary" @click="$router.push({name: 'Productos', params: {id: categs.id}})">{{categs.nombre}}</a>
                 </h4>
                 <p class="card-text">{{categs.descripcion}}</p>
                 <div class="d-flex justify-content-between align-items-center">
